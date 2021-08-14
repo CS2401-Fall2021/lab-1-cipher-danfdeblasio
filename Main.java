@@ -4,8 +4,8 @@ class Main {
   }
   public static void runTests(){
     // Here is an example test case
-   String messageToEncode="here is a top secret message";
-   String sampleEncoded="khuh lv d wrs vhfuhw phvvdjh";
+   String messageToEncode="here is a top secret message!";
+   String sampleEncoded="khuh lv d wrs vhfuhw phvvdjh!";
    int shift =3;
    Cipher cipher= new Cipher(shift);
 

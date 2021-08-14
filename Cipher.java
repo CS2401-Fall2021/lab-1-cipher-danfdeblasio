@@ -7,9 +7,21 @@ public class Cipher{
   public String encode(String s){
     String rtn = "";
     for(int i=0; i<s.length(); i++){
-      if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z') || (s.charAt(i) >= 'a' && s.charAt(i) <= 'z')){
-        rtn += (char)((int)s.charAt(i)+shift);
-      }else{
+      if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z')){
+        int index = (int)s.charAt(i)-(int)'a';
+        index += shift;
+        index %= 26;
+        index += (int)'a';
+        rtn += (char) index;
+      }
+      else if((s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')){
+        int index = (int)s.charAt(i)-(int)'A';
+        index += shift;
+        index %= 26;
+        index += (int)'A';
+        rtn += (char) index;
+      }
+      else{
         rtn += s.charAt(i);
       }
     }
@@ -21,9 +33,21 @@ public class Cipher{
   public String decode(String s){
     String rtn = "";
     for(int i=0; i<s.length(); i++){
-      if(((char)((int)s.charAt(i)+shift) >= 'a' && (char)((int)s.charAt(i)+shift) <= 'z') || ((char)((int)s.charAt(i)+shift) >= 'a' && (char)((int)s.charAt(i)+shift) <= 'z')){
-        rtn += (char)((int)s.charAt(i)+shift);
-      }else{
+      if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z')){
+        int index = (int)s.charAt(i)-(int)'a';
+        index -= shift;
+        if(index < 0) index += 26;
+        index += (int)'a';
+        rtn += (char) index;
+      }
+      else if((s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')){
+        int index = (int)s.charAt(i)-(int)'A';
+        index -= shift;
+        if(index < 0) index += 26;
+        index += (int)'A';
+        rtn += (char) index;
+      }
+      else{
         rtn += s.charAt(i);
       }
     }
