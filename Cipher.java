@@ -7,10 +7,10 @@ public class Cipher{
   public String encode(String s){
     String rtn = "";
     for(int i=0; i<s.length(); i++){
-      if(s.charAt(i) != ' '){
+      if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z') || (s.charAt(i) >= 'a' && s.charAt(i) <= 'z')){
         rtn += (char)((int)s.charAt(i)+shift);
       }else{
-        rtn += ' ';
+        rtn += s.charAt(i);
       }
     }
     return rtn;
@@ -21,10 +21,10 @@ public class Cipher{
   public String decode(String s){
     String rtn = "";
     for(int i=0; i<s.length(); i++){
-      if(s.charAt(i) != ' '){
-        rtn += (char)((int)s.charAt(i)-shift);
+      if(((char)((int)s.charAt(i)+shift) >= 'a' && (char)((int)s.charAt(i)+shift) <= 'z') || ((char)((int)s.charAt(i)+shift) >= 'a' && (char)((int)s.charAt(i)+shift) <= 'z')){
+        rtn += (char)((int)s.charAt(i)+shift);
       }else{
-        rtn += ' ';
+        rtn += s.charAt(i);
       }
     }
     return rtn;
