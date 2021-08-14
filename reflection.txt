@@ -1,0 +1,19 @@
+List your clarifying questions and their answers(5 pts)
+1)
+2)
+3)
+
+Walk through an example (5 pts)
+
+
+List  edge cases(5 pts)
+1)
+2)
+3)
+
+Describe approach as you would to a little cousin who does not know anything about computer science terms (15 pts)
+
+
+
+Based off your description, identify keywords that hint what ds&a you should use in your implementation (5 pts)
+
