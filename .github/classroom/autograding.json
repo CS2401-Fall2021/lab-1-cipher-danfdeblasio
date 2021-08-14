@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "testEncode_empty",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": ",10\r\n",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "test Decode",
+      "setup": "javac *.java",
+      "run": "java -cp . TestDecode",
+      "input": "rs,10",
+      "output": "hi",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testEncode_punctuatuon",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": "oh hi.,7",
+      "output": "vo op.",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testEncode_negative",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": "testing123,-5",
+      "output": "oznodib123",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testEncode_wrap",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": "abz,10",
+      "output": "klj",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testEncode_capitalized",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": "HI,10",
+      "output": "rs",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testEncode_zero",
+      "setup": "javac *.java",
+      "run": "java -cp . TestEncode",
+      "input": "oh,0",
+      "output": "oh",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testDecode_punctuation",
+      "setup": "javac *.java",
+      "run": "java -cp . TestDecode",
+      "input": "mvv.ihy,7",
+      "output": "foo.bar",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "TestDecode_negative",
+      "setup": "javac *.java",
+      "run": "java -cp . TestDecode",
+      "input": "bkk.xwv,-4",
+      "output": "foo.baz",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "testDecode_zeron",
+      "setup": "javac *.java",
+      "run": "java -cp . TestDecode",
+      "input": "foo. bar,0",
+      "output": "foo. bar",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
