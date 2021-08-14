@@ -18,7 +18,7 @@ public class Cipher{
         int index = (int)s.charAt(i)-(int)'A';
         index += shift;
         index %= 26;
-        index += (int)'A';
+        index += (int)'a';
         rtn += (char) index;
       }
       else{
@@ -44,7 +44,7 @@ public class Cipher{
         int index = (int)s.charAt(i)-(int)'A';
         index -= shift;
         if(index < 0) index += 26;
-        index += (int)'A';
+        index += (int)'a';
         rtn += (char) index;
       }
       else{
