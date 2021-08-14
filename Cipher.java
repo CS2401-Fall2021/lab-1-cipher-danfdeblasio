@@ -10,6 +10,7 @@ public class Cipher{
       if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z')){
         int index = (int)s.charAt(i)-(int)'a';
         index += shift;
+        if(index < 0) index += 26;
         index %= 26;
         index += (int)'a';
         rtn += (char) index;
@@ -17,6 +18,7 @@ public class Cipher{
       else if((s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')){
         int index = (int)s.charAt(i)-(int)'A';
         index += shift;
+        if(index < 0) index += 26;
         index %= 26;
         index += (int)'a';
         rtn += (char) index;
@@ -37,6 +39,7 @@ public class Cipher{
         int index = (int)s.charAt(i)-(int)'a';
         index -= shift;
         if(index < 0) index += 26;
+        index %= 26;
         index += (int)'a';
         rtn += (char) index;
       }
@@ -44,6 +47,7 @@ public class Cipher{
         int index = (int)s.charAt(i)-(int)'A';
         index -= shift;
         if(index < 0) index += 26;
+        index %= 26;
         index += (int)'a';
         rtn += (char) index;
       }
