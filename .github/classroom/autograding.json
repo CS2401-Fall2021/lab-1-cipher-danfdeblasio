@@ -6,7 +6,7 @@
       "run": "java -cp . TestEncode",
       "input": ",10\r\n",
       "output": "",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -16,7 +16,7 @@
       "run": "java -cp . TestDecode",
       "input": "rs,10",
       "output": "hi",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -26,7 +26,7 @@
       "run": "java -cp . TestEncode",
       "input": "oh hi.,7",
       "output": "vo op.",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -36,7 +36,7 @@
       "run": "java -cp . TestEncode",
       "input": "testing123,-5",
       "output": "oznodib123",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -46,7 +46,7 @@
       "run": "java -cp . TestEncode",
       "input": "abz,10",
       "output": "klj",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -56,7 +56,7 @@
       "run": "java -cp . TestEncode",
       "input": "HI,10",
       "output": "rs",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
@@ -86,7 +86,7 @@
       "run": "java -cp . TestDecode",
       "input": "bkk.xwv,-4",
       "output": "foo.baz",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 5
     },
